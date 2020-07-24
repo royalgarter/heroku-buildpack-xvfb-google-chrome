@@ -70,6 +70,7 @@ indent "Installing Google Chrome from the $channel channel."
 if [ -z "$GOOGLE_CHROME_DOWNLOAD_LINK" ]; then
     PACKAGES="https://dl.google.com/linux/direct/google-chrome-${channel}_current_amd64.deb libxss1 libnss3 xvfb"
 else
+    echo "... using GOOGLE_CHROME_DOWNLOAD_LINK=${GOOGLE_CHROME_DOWNLOAD_LINK}"
     PACKAGES="${GOOGLE_CHROME_DOWNLOAD_LINK} libxss1 libnss3 xvfb"
 fi
 
